@@ -15,6 +15,12 @@ public struct CodableError: Error, Codable, Equatable {
     public let domain: String
     public let code: Int
 
+    // MARK: - Lifecycle
+
+    
+    /// Initializes a `CodableError` instance with the given `Error`.
+    ///
+    /// - Parameter error: An `Error` instance.
     public init(_ error: Error) {
         self.errorType = String(reflecting: type(of: error))
         self.description = (error as NSError).description
@@ -23,11 +29,18 @@ public struct CodableError: Error, Codable, Equatable {
         self.code = (error as NSError).code
     }
 
-    internal init(errorType: String,
-                  description: String,
-                  localizedDescription: String,
-                  domain: String,
-                  code: Int) {
+    /// Initializes a `CodableError` instance with the given parameters.
+    ///
+    /// - Parameter errorType: `String`
+    /// - Parameter description: `String`
+    /// - Parameter localizedDescription: `String`
+    /// - Parameter domain: `String`
+    /// - Parameter code: `Int`
+    public init(errorType: String,
+                description: String,
+                localizedDescription: String,
+                domain: String,
+                code: Int) {
         self.errorType = errorType
         self.description = description
         self.localizedDescription = localizedDescription
