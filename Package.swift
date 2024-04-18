@@ -4,6 +4,10 @@ import PackageDescription
 
 let package = Package(
     name: "Toolbox",
+    platforms: [
+        .iOS(.v17),
+        .macOS(.v14)
+    ],
     products: [
         .library(
             name: "Toolbox",
