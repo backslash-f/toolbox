@@ -1,0 +1,3 @@
+---
+disabled_rules:
+  - nesting  # Opinion-based (https://stackoverflow.com/a/46767132/584548)
