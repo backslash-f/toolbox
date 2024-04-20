@@ -6,3 +6,36 @@
 
 # Toolbox 🧰
 A collection of useful Swift tools.
+
+## Tools
+- `CodableError`: Defines a `Codable` wrapper for Apple's `Error`.
+
+## Integration
+### Xcode
+Use Xcode's [built-in support for SPM](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
+
+*or...*
+
+### Package.swift
+In your `Package.swift`, add `Toolbox` as a dependency:
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/backslash-f/toolbox", from: "0.0.1")
+]
+```
+
+Associate the dependency with your target:
+
+```swift
+targets: [
+  .target(
+    name: "YourAppName",
+    dependencies: [
+      .product(name: "Toolbox", package: "toolbox")
+    ]
+  )
+]
+```
+
+Run: `swift build`
