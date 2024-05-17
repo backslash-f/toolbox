@@ -17,7 +17,6 @@ public struct CodableError: Error, Codable, Equatable {
 
     // MARK: - Lifecycle
 
-    
     /// Initializes a `CodableError` instance with the given `Error`.
     ///
     /// - Parameter error: An `Error` instance.
