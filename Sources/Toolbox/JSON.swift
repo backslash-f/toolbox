@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Loads and decodes a JSON file from the main bundle or *"Development Assets"* into a specified Decodable type.
+/// Loads and decodes `.json files` from the *main bundle* or *"Development Assets"* into a specified `Decodable` type.
 ///
 /// This function attempts to locate a JSON file with the given filename in the main bundle or *"Development Assets"*,
 /// read its contents, and decode it into the specified type.

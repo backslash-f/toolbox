@@ -8,7 +8,10 @@
 A collection of useful Swift tools.
 
 ## Tools
-- `CodableError`: Defines a `Codable` wrapper for Apple's `Error`.
+Tool | Description
+--- | ---
+`CodableError` | Defines a `Codable` wrapper for Apple's `Error`.
+`loadJSONFromFile(filename:type:)` | Loads and decodes **.json files** from the *main bundle* or (*Development Assets*) into a specified `Decodable` type.
 
 ## Integration
 ### Xcode
